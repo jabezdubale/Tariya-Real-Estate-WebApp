@@ -9,14 +9,12 @@
     border-bottom: 1.4px solid transparent;
     transition: all 200ms ease-in-out;
     font-size: 12px;
-
 }
 ::placeholder {
   color: rgba(200, 200, 200, 1);
 }
 
 :focus {
-  outline: none;   
-  border-bottom: 2px solid rgb(241, 196, 15);
+  outline: none;
 }
 

@@ -25,7 +25,7 @@ export function SignupForm(props) {
 
     if(registerIsClicked === true){
       if(password === confirmPassword){
-        axios.post("http://localhost:8080/api/account/create", {
+        axios.post("https://tariya-real-estate.herokuapp.com/api/account/create", {
           "fullName": fullName,
           "phone": phoneNumber,
           "email": email,
@@ -34,6 +34,7 @@ export function SignupForm(props) {
           "pin": password
         }).then((response) => {
           console.log(response.data)
+          alert("Account has been created. Please log in using your Email and password");
         }
           )
         .catch((error) =>{
@@ -51,21 +52,33 @@ export function SignupForm(props) {
     <BoxContainer>
       <FormContainer>
         <Input type="text" value={fullName} placeholder="Full Name" onChange={(event) => setFullName(event.target.value)} />
-        <Input type="tel" value={phoneNumber} placeholder="Phone Number" onChange={(event) => setPhoneNumber(event.target.value)}/>
-        <Input type="email" value={email} placeholder="Email" onChange={(event) => setEmail(event.target.value)}/>
-        
         <DatePicker
                     selected={dob}
-                    maxWidth
+                    portalId="root"
                     placeholderText="Date of Birth" 
                     showMonthDropdown
+                    showYearDropdown
+                    dropdownMode="select"
                     isClearable
+                    popperPlacement="bottom"
+                    popperModifiers={{
+                        flip: {
+                            behavior: ["bottom"]
+                        },
+                        preventOverflow: {
+                            enabled: false 
+                        },
+                        hide: {
+                            enabled: false 
+                        }
+                    }}
                     onChange={date => setDob(date)} 
-          />
-        
-        <FormControl sx={{ "& .MuiOutlinedInput-root": { "&.Mui-focused fieldset": {borderColor: "RGBA(200, 200, 200, 0.3)"}} }}>
+          />        
+        <Input type="tel" value={phoneNumber} placeholder="Phone Number" onChange={(event) => setPhoneNumber(event.target.value)}/>
+        <Input type="email" value={email} placeholder="Email" onChange={(event) => setEmail(event.target.value)}/>
+        <FormControl sx={{ "& .MuiOutlinedInput-root": { "&.Mui-focused fieldset": {borderColor: "RGBA(200, 200, 200, 0.3)"}} } }>
         <Select 
-            id="permission" 
+            id="permission"
             value = {permission} 
             type="text" 
             size="small" 
