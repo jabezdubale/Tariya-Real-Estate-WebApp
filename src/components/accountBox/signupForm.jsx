@@ -24,7 +24,10 @@ export function SignupForm(props) {
   useEffect(() => {
 
     if(registerIsClicked === true){
-      if(password === confirmPassword){
+      if (fullName=="" || phoneNumber=="" || email=="" || dob==null || permission=="" || password=="" || confirmPassword==""){
+        alert("Please fill in all fields");
+        setRegisterIsClicked(false);
+      }else if(password === confirmPassword){
         axios.post("https://tariya-real-estate.herokuapp.com/api/account/create", {
           "fullName": fullName,
           "phone": phoneNumber,
@@ -34,6 +37,7 @@ export function SignupForm(props) {
           "pin": password
         }).then((response) => {
           console.log(response.data)
+          
           alert("Account has been created. Please log in using your Email and password");
         }
           )
