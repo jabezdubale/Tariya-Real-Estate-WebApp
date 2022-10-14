@@ -24,7 +24,7 @@ export function SignupForm(props) {
   useEffect(() => {
 
     if(registerIsClicked === true){
-      if (fullName=="" || phoneNumber=="" || email=="" || dob==null || permission=="" || password=="" || confirmPassword==""){
+      if (fullName==="" || phoneNumber==="" || email==="" || dob===null || permission==="" || password==="" || confirmPassword===""){
         alert("Please fill in all fields");
         setRegisterIsClicked(false);
       }else if(password === confirmPassword){
