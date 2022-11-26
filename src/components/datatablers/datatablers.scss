@@ -1,0 +1,72 @@
+.datatablers{
+    height: 90vh;
+    padding: 20px;
+
+    .datatableTitle{
+        width: 100%;
+        font-size: 18px;
+        font-weight: 500;
+        color: gray;
+        margin-bottom: 10px; 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .link{
+            text-decoration: none;
+            color: green;
+            font-size: 16px;
+            font-weight: 400;
+            border: 1px solid green;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+    
+    .datagrid{
+        height: 80vh;
+        width: 100%;
+    }
+
+    .cellwithperm{
+        padding: 5px;
+        border-radius: 5px;
+
+        &.Unsold {
+            background-color: rgba(0, 128, 0, 0.05);
+            color:green;
+            width: 70px;
+            text-align: center;
+        }
+
+        &.Sold {
+            background-color: rgba(255, 0, 0, 0.05);
+            color:crimson;
+            width: 70px;
+            text-align: center;
+        }
+    }
+
+    .cellAction{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        
+        .viewButton{
+            padding: 2px 5px;
+            border-radius: 5px;
+            color: rgba(0, 0, 139, 0.996);
+            border: 1px dotted rgba(0, 0, 139, 0.596);
+            cursor: pointer;
+        }
+
+        .deleteButton{
+            padding: 2px 5px;
+            border-radius: 5px;
+            color: crimson;
+            border: 1px dotted rgba(139, 0, 0, 0.596);
+            cursor: pointer;
+        }
+    }
+}

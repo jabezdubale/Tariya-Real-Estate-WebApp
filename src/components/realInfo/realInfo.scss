@@ -1,0 +1,83 @@
+.realInfo{
+    flex: 2;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 10px;
+    height: 90vh;
+
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: gray;
+        padding-right: 5px;
+        padding-top: 5px;
+
+        .botton1{
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+        }       
+
+        .title{
+            font-weight: bold;
+            font-size: 14px;
+            color: rgb(160, 160, 160);
+        }
+    }
+
+    .bottom{
+        flex-direction: column;
+        align-items: center;
+        overflow-y:auto;
+        height: 85%;
+
+
+        .span{
+            display: flex;
+            font-size: 16px;
+            font-weight: bold;
+            align-items: center;
+            padding-top: 15px;
+        }
+
+        .rsimgcontain{
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+
+            .rsimg{
+                width: 60%;
+                border-radius: 15px;
+                padding: 5px;
+            }  
+
+        }
+
+        .description{
+            align-items: center;
+            padding: 5px;
+        }
+        
+    }
+
+    .footer{
+        
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+
+        .botton2{
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+        }
+    }
+}
