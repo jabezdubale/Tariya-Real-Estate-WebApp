@@ -86,8 +86,8 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <SettingsIcon className="icon2" />
-                        <Link to="/" style={{ textDecoration: "none"}}>
-                        <span>Settings</span>                        
+                        <Link to="/signin" style={{ textDecoration: "none"}}>
+                        <span>Signup</span>                        
                         </Link>
                     </li>
                     <p className="title">ACCOUNT</p>
