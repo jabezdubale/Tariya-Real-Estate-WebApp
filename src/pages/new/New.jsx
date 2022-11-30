@@ -13,17 +13,42 @@ const New = ({inputs,title}) => {
             <div className="newContainer">
                 <Navbar/>
                 <div className="top">
-                    <h1>{title}</h1>
+                    <h1>Add new User</h1>
                 </div>
                 <div className="bottom">
                     <div className="left">
                         <img src= {file ? URL.createObjectURL(file) : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"} alt="" />
-                    </div>
-                    <div className="right">
-                        <form>
                         <div className="formInput">
                                 <label htmlFor="file">Profile picture: <DriveFolderUploadOutlinedIcon className="icon"/></label>
                                 <input type="file" id="file" onChange={(e) => setFile(e.target.files[0])} style={{display:"none"}}/>
+                            </div>
+                    </div>
+                    
+                    <div className="right">
+                        <form>
+
+                            <div className="formInput">                                
+                                <input type="text" placeholder="Full Name" />                               
+                            </div>
+
+                            <div className="formInput">
+                                <input type="text" placeholder="Phone Number" />                               
+                            </div>
+
+                            <div className="formInput">
+                                <input type="email" placeholder="Email" />                               
+                            </div>
+
+                            <div className="formInput">
+                                <input type="text" placeholder="Business Relation" />                               
+                            </div>
+
+                            <div className="formInput">
+                                <input type="password" placeholder="Password" />                               
+                            </div>
+
+                            <div className="formInput">
+                                <input type="password" placeholder="Confirm Password" />                               
                             </div>
 
                             {inputs.map((input) => (
