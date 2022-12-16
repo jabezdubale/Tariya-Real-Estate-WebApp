@@ -23,7 +23,7 @@ const Widget = ({type}) => {
     });
 
     dataRs[0]?.data?.forEach(Avail => {
-        if (Avail.houseStatus==="Available") return rsAvailRs++;
+        if (Avail.houseStatus==="Unsold") return rsAvailRs++;
     });
 
 

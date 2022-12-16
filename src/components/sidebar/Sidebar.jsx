@@ -4,10 +4,6 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import BedroomParentIcon from '@mui/icons-material/BedroomParent';
 import SellIcon from '@mui/icons-material/Sell';
-import InsertChartIcon from '@mui/icons-material/InsertChart';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
-import PsychologyIcon from '@mui/icons-material/Psychology';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -48,46 +44,23 @@ const Sidebar = () => {
                         </Link>                       
                     </li>
                     <li>
-                        <BedroomParentIcon className="icon2" />
+                        <BedroomParentIcon className="icon" />
                         <Link to="/" style={{ textDecoration: "none"}}>
                         <span>Available RealEstate</span>                        
                         </Link>
                     </li>
                     <li>
-                        <SellIcon className="icon2" />
+                        <SellIcon className="icon" />
                         <Link to="/" style={{ textDecoration: "none"}}>
                         <span>For Sell</span>                        
                         </Link>
                     </li>
                     <p className="title">SYSTEM</p>
+                                                            
                     <li>
-                        <InsertChartIcon className="icon2" />
-                        <Link to="/" style={{ textDecoration: "none"}}>
-                        <span>Stats</span>                        
-                        </Link>
-                    </li>
-                    <li>
-                        <NotificationsNoneIcon className="icon2" />
-                        <Link to="/" style={{ textDecoration: "none"}}>
-                        <span>Notifications</span>                     
-                        </Link>   
-                    </li>
-                    <li>
-                        <HealthAndSafetyIcon className="icon2" />
-                        <Link to="/" style={{ textDecoration: "none"}}>
-                        <span>System Helath</span>                     
-                        </Link>   
-                    </li>
-                    <li>
-                        <PsychologyIcon className="icon2" />
-                        <Link to="/" style={{ textDecoration: "none"}}>
-                        <span>Logs</span>                        
-                        </Link>
-                    </li>
-                    <li>
-                        <SettingsIcon className="icon2" />
+                        <SettingsIcon className="icon" />
                         <Link to="/signin" style={{ textDecoration: "none"}}>
-                        <span>Signup</span>                        
+                        <span>Signin</span>                        
                         </Link>
                     </li>
                     <p className="title">ACCOUNT</p>

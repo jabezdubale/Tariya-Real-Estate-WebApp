@@ -1,6 +1,10 @@
 import "./realInfo.scss"
+import useAxios from "axios-hooks";
 
 const RealInfo = () => {
+
+    const dataRs = useAxios("https://tariya-real-estate.herokuapp.com/api/realestate/list")
+
     return (
         <div className="realInfo">
             <div className="top">
@@ -49,7 +53,7 @@ const RealInfo = () => {
                 <span className="span">Description</span>
                 <div className="description">
                     <ul>
-                        <li>Address: Ethiopia, Addis Ababa, K/k, W06 </li>
+                        <li>Address: Ethiopia, Addis Ababa, K/k, W06 </li> 
                         <li>Price: 3,400,000</li>
                         <li>Number of bedroom: 3</li>
                         <li>Number of bathroom: 4</li>

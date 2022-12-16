@@ -49,15 +49,16 @@ const actionColumn = [{field: "action", headerName:"Action", width: 130, renderC
 
 const columns = [
         { field: 'id', headerName: 'ID', width: 50 }, 
-        { field: 'sellerId', headerName: 'Seller ID', width: 80 },
-        { field: 'price', headerName: 'Price', width: 120 },
-        { field: 'location', headerName: 'Location', width: 80,},
-        { field: 'houseType', headerName: 'House Type', width: 120,},
+        { field: 'sellerId', headerName: 'Seller ID', width: 70 },
+        { field: 'price', headerName: 'Price', width: 110 },
+        { field: 'locationLatitude', headerName: 'Latitude', width: 80,},
+        { field: 'locationLongitude', headerName: 'Longitude', width: 80,},
+        { field: 'houseType', headerName: 'House Type', width: 100,},
         { field: 'description', headerName: 'Full Description', width: 120,},
         { 
           field: 'verificationStatus', 
           headerName: 'Verf Status', 
-          width: 100,
+          width: 90,
           renderCell: (params) => {
             
             return ( <div> {params.row.verificationStatus===1 ? <CheckIcon style={{width: "70px", backgroundColor: "rgba(0, 128, 0, 0.05)", color:"green"}}/> : <ClearIcon style={{width: "70px", backgroundColor: "rgba(255, 0, 0, 0.05)", color:"crimson"}}/>} </div>)
@@ -81,7 +82,7 @@ return (
     List of RealEstates
       <Link to="/realEstate/new" className="link">
         Add New
-      </Link>
+      </Link> 
     </div>
     <div className="datagrid">
       {rows && <DataGrid

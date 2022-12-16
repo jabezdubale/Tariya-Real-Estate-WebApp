@@ -38,11 +38,12 @@ export function SignupForm(props) {
         }).then((response) => {
           console.log(response.data)
           
-          alert("Account has been created. Please log in using your Email and password");
+          alert("Account has been created! You can log in using your Email and password");
         }
           )
         .catch((error) =>{
           console.log(error);
+          alert("The user is not unique. Please check either your phone or email address.");
         })
         setRegisterIsClicked(false);
       }else{

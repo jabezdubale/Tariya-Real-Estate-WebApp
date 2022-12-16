@@ -7,12 +7,15 @@ import {
 import styled from "styled-components";
 import { AccountBox } from "./components/accountBox";
 import Home from "./pages/home/Home";
+import Edituser from "./pages/edituser/Edituser";
+import Editrs from "./pages/editrs/Editrs";
+import Nolog from "./pages/Nolog/Nolog";
 import List from "./pages/list/List";
 import Listrs from "./pages/listrs/Listrs";
 import Single from "./pages/single/Single";
 import Singlers from "./pages/singlers/Singlers";
 import New from "./pages/new/New";
-import { userInputs, realEstateInputs } from "./formSource"
+import Newrs from "./pages/newrs/Newrs";
 
 const AppContainer = styled.div`
   width: 100%;
@@ -26,21 +29,24 @@ const AppContainer = styled.div`
 function App() {
 
   return (
-    <div className="App">
+    <div className="App"> 
       <BrowserRouter>
     <Routes>
       <Route path="/">
         <Route index  element={<Home/>} />
         <Route path="signin" element={<AppContainer><AccountBox /></AppContainer>} />
+        <Route path="nolog" element={<Nolog/>}/>
         <Route path="users">
           <Route index element={<List />}/>
           <Route path=":userId" element={<Single />}/>
-          <Route path="new" element={<New inputs={userInputs} title="Add new User" />}/>
+          <Route path="new" element={<New/>}/>
+          <Route path="edit/:userId" element={<Edituser/>}/>
         </Route>
         <Route path="realEstate">
           <Route index element={<Listrs />}/>
           <Route path=":realEstateId" element={<Singlers />}/>
-          <Route path="new" element={<New inputs={realEstateInputs} title="Add new RealEstate" />}/>
+          <Route path="new" element={<Newrs/>}/>
+          <Route path="edit/:realEstateId" element={<Editrs/>}/>
         </Route>
       </Route>
     </Routes>

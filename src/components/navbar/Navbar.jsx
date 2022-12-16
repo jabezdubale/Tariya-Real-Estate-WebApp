@@ -1,7 +1,5 @@
 import "./navbar.scss";
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 
 const Navbar = () => {
@@ -14,14 +12,7 @@ const Navbar = () => {
                 </div>
                 <div className="items">
                     
-                    <div className="item">
-                        <NotificationsNoneOutlinedIcon className="icon" />
-                        <div className="counter">1</div>
-                    </div>
-                    <div className="item">
-                        <ChatBubbleOutlineOutlinedIcon className="icon" />
-                        <div className="counter">2</div>
-                    </div>
+                    
                     <div className="item">
                         <img
                         src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
